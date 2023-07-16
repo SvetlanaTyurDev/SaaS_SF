@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OpportunityAmount</fullName>
+    <active>true</active>
+    <description>If the Stage is &apos;Closed Lost&apos;, &apos;Amount&apos; can not be empty</description>
+    <errorConditionFormula>IF( ISPICKVAL( StageName , &apos;Closed Lost&apos;) ,  ISBLANK( Amount ) , false)</errorConditionFormula>
+    <errorDisplayField>StageName</errorDisplayField>
+    <errorMessage>If the Stage is &apos;Closed Lost&apos;, &apos;Amount&apos; can not be empty</errorMessage>
+</ValidationRule>

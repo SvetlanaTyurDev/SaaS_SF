@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>57.0</apiVersion>
+    <environments>Default</environments>
+    <formulas>
+        <name>MonthlyPayment</name>
+        <dataType>Currency</dataType>
+        <expression>{!Loan_Amount}/{!Loan_Term}</expression>
+        <scale>2</scale>
+    </formulas>
+    <interviewLabel>Loan Request {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Loan Request</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>Flow</processType>
+    <screens>
+        <name>Costumer</name>
+        <label>Costumer</label>
+        <locationX>547</locationX>
+        <locationY>232</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <connector>
+            <targetReference>messagetouser</targetReference>
+        </connector>
+        <fields>
+            <name>CostumerName</name>
+            <extensionName>flowruntime:name</extensionName>
+            <fieldType>ComponentInstance</fieldType>
+            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+            <isRequired>true</isRequired>
+            <storeOutputAutomatically>true</storeOutputAutomatically>
+        </fields>
+        <fields>
+            <name>Loan_Amount</name>
+            <dataType>Currency</dataType>
+            <fieldText>Loan Amount</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>true</isRequired>
+            <scale>0</scale>
+        </fields>
+        <fields>
+            <name>Loan_Term</name>
+            <dataType>Number</dataType>
+            <fieldText>Loan Term</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>true</isRequired>
+            <scale>0</scale>
+        </fields>
+        <nextOrFinishButtonLabel>Calculate the monthly payment</nextOrFinishButtonLabel>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>CustomerInformation</name>
+        <label>Customer Information</label>
+        <locationX>756</locationX>
+        <locationY>540</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <backButtonLabel>Go Back</backButtonLabel>
+        <fields>
+            <name>email</name>
+            <extensionName>flowruntime:email</extensionName>
+            <fieldType>ComponentInstance</fieldType>
+            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+            <isRequired>true</isRequired>
+            <storeOutputAutomatically>true</storeOutputAutomatically>
+        </fields>
+        <fields>
+            <name>phone</name>
+            <extensionName>flowruntime:phone</extensionName>
+            <fieldType>ComponentInstance</fieldType>
+            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+            <isRequired>true</isRequired>
+            <storeOutputAutomatically>true</storeOutputAutomatically>
+        </fields>
+        <fields>
+            <name>SSN</name>
+            <dataType>String</dataType>
+            <fieldText>SSN</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>false</isRequired>
+        </fields>
+        <fields>
+            <name>Address</name>
+            <extensionName>flowruntime:address</extensionName>
+            <fieldType>ComponentInstance</fieldType>
+            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+            <isRequired>true</isRequired>
+            <storeOutputAutomatically>true</storeOutputAutomatically>
+        </fields>
+        <nextOrFinishButtonLabel>Apply</nextOrFinishButtonLabel>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>messagetouser</name>
+        <label>message to user</label>
+        <locationX>583</locationX>
+        <locationY>436</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <backButtonLabel>Go Back</backButtonLabel>
+        <connector>
+            <targetReference>CustomerInformation</targetReference>
+        </connector>
+        <fields>
+            <name>message</name>
+            <fieldText>&lt;p&gt;Hello dear&lt;em&gt; {!CostumerName.firstName} {!CostumerName.lastName}, &lt;/em&gt;&lt;/p&gt;&lt;p&gt;Based on information you provided, with your loan amount as &lt;strong&gt;{!Loan_Amount} &lt;/strong&gt;and your loan term as&lt;strong&gt; {!Loan_Term}&lt;/strong&gt; , your estimated monthly payment is &lt;strong style=&quot;color: rgb(228, 10, 10);&quot;&gt;{!MonthlyPayment}&lt;/strong&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <nextOrFinishButtonLabel>yes, I would like to get the loan</nextOrFinishButtonLabel>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <start>
+        <locationX>458</locationX>
+        <locationY>48</locationY>
+        <connector>
+            <targetReference>Costumer</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+</Flow>

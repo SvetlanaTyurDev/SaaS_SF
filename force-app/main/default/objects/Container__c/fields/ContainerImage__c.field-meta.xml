@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ContainerImage__c</fullName>
+    <externalId>false</externalId>
+    <formula>CASE( Type__c , 
+&apos;Temperature Sensitive&apos;, IMAGE(&apos;https://d8y000001qpy0uag-dev-ed--c.develop.vf.force.com/resource/1680362396000/TemperatureSensitiveContainer&apos;, &apos;Temperature Sensitive Picture&apos;, 100, 120) , 
+
+&apos;General Purpose&apos;, IMAGE(&apos;https://d8y000001qpy0uag-dev-ed--c.develop.vf.force.com/resource/1680362495000/GeneralPurposeContainer?&apos;, &apos;General Purpose Picture&apos;,  100, 120) ,
+
+&apos;Tank&apos;,IMAGE(&apos;https://d8y000001qpy0uag-dev-ed--c.develop.vf.force.com/resource/1680362548000/TankContainer?&apos;, &apos;Tank Picture&apos;, 100, 120), 
+
+null)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>ContainerImage</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

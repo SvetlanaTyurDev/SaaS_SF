@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>Marketing_TM_All_Records</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Marketing TM All Records</label>
+        <sharedTo>
+            <role>Marketing_TM</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>OwnerId</field>
+            <operation>notEqual</operation>
+            <value></value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Marketing_TM_Land_Records_Access</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Marketing TM Land Records Access</label>
+        <sharedTo>
+            <role>Marketing_TM</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>Transport__c</field>
+            <operation>equals</operation>
+            <value>Land</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingOwnerRules>
+        <fullName>Marketing_TL_Access</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Marketing TL Access</label>
+        <sharedTo>
+            <role>Marketing_TL</role>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinates>OPS_TL</roleAndSubordinates>
+        </sharedFrom>
+    </sharingOwnerRules>
+</SharingRules>

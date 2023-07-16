@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ApprovalDateRule</fullName>
+    <active>true</active>
+    <description>Approval must be done during the first 15 days of the month</description>
+    <errorConditionFormula>DAY( ApprovalDate__c ) &gt;15</errorConditionFormula>
+    <errorDisplayField>ApprovalDate__c</errorDisplayField>
+    <errorMessage>Approval must be done during the first 15 days of the month</errorMessage>
+</ValidationRule>

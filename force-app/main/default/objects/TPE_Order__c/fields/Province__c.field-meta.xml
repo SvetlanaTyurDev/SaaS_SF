@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Province__c</fullName>
+    <externalId>false</externalId>
+    <label>Province</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Country__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>ALBERTA</fullName>
+                <default>false</default>
+                <label>ALBERTA</label>
+            </value>
+            <value>
+                <fullName>BRITISH COLUMBIA</fullName>
+                <default>false</default>
+                <label>BRITISH COLUMBIA</label>
+            </value>
+            <value>
+                <fullName>MANITOBA</fullName>
+                <default>false</default>
+                <label>MANITOBA</label>
+            </value>
+            <value>
+                <fullName>NEW BRUNSWICK</fullName>
+                <default>false</default>
+                <label>NEW BRUNSWICK</label>
+            </value>
+            <value>
+                <fullName>NEWFOUNDLAND and LABRADOR</fullName>
+                <default>false</default>
+                <label>NEWFOUNDLAND and LABRADOR</label>
+            </value>
+            <value>
+                <fullName>NORTHWEST TERRITORIES</fullName>
+                <default>false</default>
+                <label>NORTHWEST TERRITORIES</label>
+            </value>
+            <value>
+                <fullName>NOVA SCOTIA</fullName>
+                <default>false</default>
+                <label>NOVA SCOTIA</label>
+            </value>
+            <value>
+                <fullName>NUNAVUT</fullName>
+                <default>false</default>
+                <label>NUNAVUT</label>
+            </value>
+            <value>
+                <fullName>ONTARIO</fullName>
+                <default>false</default>
+                <label>ONTARIO</label>
+            </value>
+            <value>
+                <fullName>PRINCE EDWARD ISLAND</fullName>
+                <default>false</default>
+                <label>PRINCE EDWARD ISLAND</label>
+            </value>
+            <value>
+                <fullName>QUEBEC</fullName>
+                <default>false</default>
+                <label>QUEBEC</label>
+            </value>
+            <value>
+                <fullName>SASKATCHEWAN</fullName>
+                <default>false</default>
+                <label>SASKATCHEWAN</label>
+            </value>
+            <value>
+                <fullName>YUKON</fullName>
+                <default>false</default>
+                <label>YUKON</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Canada</controllingFieldValue>
+            <valueName>ALBERTA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Canada</controllingFieldValue>
+            <valueName>BRITISH COLUMBIA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Canada</controllingFieldValue>
+            <valueName>MANITOBA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Canada</controllingFieldValue>
+            <valueName>NEW BRUNSWICK</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Canada</controllingFieldValue>
+            <valueName>NEWFOUNDLAND and LABRADOR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Canada</controllingFieldValue>
+            <valueName>NORTHWEST TERRITORIES</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Canada</controllingFieldValue>
+            <valueName>NOVA SCOTIA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Canada</controllingFieldValue>
+            <valueName>NUNAVUT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Canada</controllingFieldValue>
+            <valueName>ONTARIO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Canada</controllingFieldValue>
+            <valueName>PRINCE EDWARD ISLAND</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Canada</controllingFieldValue>
+            <valueName>QUEBEC</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Canada</controllingFieldValue>
+            <valueName>SASKATCHEWAN</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Canada</controllingFieldValue>
+            <valueName>YUKON</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Parcel_Rentable__c</fullName>
+    <externalId>false</externalId>
+    <formula>OR(ISPICKVAL( Type__c , &apos;General Purpose&apos;),ISPICKVAL( Type__c , &apos;Temperature Sensitive&apos;))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Parcel Rentable</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

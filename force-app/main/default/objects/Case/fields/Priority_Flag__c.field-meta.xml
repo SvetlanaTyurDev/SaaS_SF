@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Priority_Flag__c</fullName>
+    <externalId>false</externalId>
+    <formula>CASE( Priority , 
+
+&apos;Low&apos;,  IMAGE(&apos;https://d8y000001qpy0uag-dev-ed--c.develop.vf.force.com/resource/1683395110000/Green_Flag?&apos;, &apos;Green Flag&apos; , 100, 120) ,
+
+&apos;Medium&apos;,  IMAGE(&apos;https://d8y000001qpy0uag-dev-ed--c.develop.vf.force.com/resource/1683394575000/Yellow_Flag?&apos;, &apos;Yellow Flag&apos;, 100, 120) ,
+
+ IMAGE(&apos;https://d8y000001qpy0uag-dev-ed--c.develop.vf.force.com/resource/1683394980000/Red_Flag?&apos;, &apos;Red Flag&apos; , 100, 120) )</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Priority Flag</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

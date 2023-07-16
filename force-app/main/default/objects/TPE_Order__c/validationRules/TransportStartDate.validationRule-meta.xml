@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TransportStartDate</fullName>
+    <active>true</active>
+    <description>date can not be in the past</description>
+    <errorConditionFormula>Transport_start__c  &lt;  TODAY()</errorConditionFormula>
+    <errorDisplayField>Transport_start__c</errorDisplayField>
+    <errorMessage>date can not be in the past</errorMessage>
+</ValidationRule>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OnlyNumbers</fullName>
+    <active>true</active>
+    <description>Phone number can contains only numbers</description>
+    <errorConditionFormula>NOT(ISNUMBER( Phone_number__c ) )</errorConditionFormula>
+    <errorDisplayField>Phone_number__c</errorDisplayField>
+    <errorMessage>Phone number can contains only numbers</errorMessage>
+</ValidationRule>
